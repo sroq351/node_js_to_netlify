@@ -15,5 +15,20 @@ router.get("/test", (req, res) => {
     },
   ]);
 });
+
+router.get("/books", (req, res) => {
+  res.json([
+    {
+      title: "Test POST",
+      author: "Lesław Dzik",
+      pageNum: 288,
+      imageURL:
+        "https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/szkolne-lifehacki-b-iext164461140.jpg",
+      topic: "IT",
+      id: 1,
+    },
+  ]);
+});
+
 app.use("/.netlify/functions/api", router);
 module.exports.handler = serverless(app);
