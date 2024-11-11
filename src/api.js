@@ -1,8 +1,8 @@
-constexpress = require("express");
-constserverless = require("serverless-http");
-constapp = express();
-constcors = require("cors");
-constrouter = express.Router();
+const express = require("express");
+const serverless = require("serverless-http");
+const app = express();
+const cors = require("cors");
+const router = express.Router();
 app.use(cors());
 router.get("/", (req, res) => {
   res.send("App is running..");
